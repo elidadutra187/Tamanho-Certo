@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tamanho Certo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">TC</span>
+          <div>
+            <strong>Tamanho Certo</strong>
+            <small>Guia inteligente de roupas</small>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#dashboard">Painel</a>
+          <a href="#simulador">Simulador</a>
+          <a href="#guias">Guias</a>
+          <a href="#widget">Widget</a>
+        </nav>
+        <div class="connection-card" id="connectionCard">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Conexao</strong>
+            <p id="connectionText">Verificando Nuvemshop...</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <header class="hero" id="dashboard">
+          <div>
+            <p class="eyebrow">App para Nuvemshop</p>
+            <h1>Reduza duvidas de tamanho antes da compra</h1>
+            <p>
+              Recomende o tamanho ideal para camisetas, vestidos, calcas e infantil com perguntas adaptadas ao produto.
+            </p>
+          </div>
+          <a class="button primary" id="connectButton" href="/auth/install">Conectar Nuvemshop</a>
+        </header>
+
+        <section class="metrics">
+          <article>
+            <span>Guias ativos</span>
+            <strong id="metricGuides">-</strong>
+          </article>
+          <article>
+            <span>Recomendacoes</span>
+            <strong id="metricRecommendations">-</strong>
+          </article>
+          <article>
+            <span>Categorias cobertas</span>
+            <strong>4</strong>
+          </article>
+          <article>
+            <span>Modo atual</span>
+            <strong id="metricMode">Demo</strong>
+          </article>
+        </section>
+
+        <section class="workspace" id="simulador">
+          <div class="panel product-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Produto</p>
+                <h2>Simular recomendacao</h2>
+              </div>
+            </div>
+            <label>
+              Nome do produto
+              <input id="productName" value="Vestido midi canelado" />
+            </label>
+            <label>
+              Categoria
+              <select id="category">
+                <option value="vestidos">Vestidos</option>
+                <option value="camisetas">Camisetas e blusas</option>
+                <option value="calcas">Calcas, shorts e bermudas</option>
+                <option value="infantil">Infantil</option>
+              </select>
+            </label>
+            <button id="loadGuide" class="button">Atualizar perguntas</button>
+            <div class="tip">
+              O app usa nome, categoria e tags do produto para escolher perguntas coerentes com a peca.
+            </div>
+          </div>
+
+          <div class="panel widget-preview">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Widget do cliente</p>
+                <h2 id="guideTitle">Vestido adulto</h2>
+              </div>
+              <span id="questionCount" class="badge">7 perguntas</span>
+            </div>
+
+            <form id="fitForm" class="question-grid"></form>
+
+            <div class="actions">
+              <button id="recommend" class="button primary" type="button">Descobrir tamanho</button>
+              <button id="reset" class="button quiet" type="button">Limpar</button>
+            </div>
+
+            <div id="result" class="result" hidden></div>
+          </div>
+        </section>
+
+        <section class="panel" id="guias">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Base de guias</p>
+              <h2>Regras por categoria de roupa</h2>
+            </div>
+            <button class="button quiet" id="refreshGuides">Atualizar</button>
+          </div>
+          <div class="guide-grid" id="guideGrid"></div>
+        </section>
+
+        <section class="panel widget-install" id="widget">
+          <div>
+            <p class="eyebrow">Instalacao futura</p>
+            <h2>Widget para pagina do produto</h2>
+            <p>
+              A proxima etapa e injetar este botao no produto da Nuvemshop e abrir o questionario sem tirar o cliente da compra.
+            </p>
+          </div>
+          <pre><code>&lt;script src="https://SEU-APP.onrender.com/widget.js"&gt;&lt;/script&gt;</code></pre>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
