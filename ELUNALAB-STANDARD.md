@@ -1,0 +1,1 @@
+Padrão autorizado em 07/10/2026: logo e crédito Criado pela ElunaLab com link https://elunalab.onrender.com no rodapé; seletor pt-BR/en/es no topo de todas as páginas e suporte com anexo até 5 MB enviado a elunalab@gmail.com. Rodapé implementado nesta alteração. Idiomas e provedor próprio do suporte ainda pendentes. Não traduzir dados reais nem reutilizar segredos de outros apps.
