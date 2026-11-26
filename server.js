@@ -34,8 +34,9 @@ app.get("/privacy", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "privacy.html"));
 });
 
-app.get("/support", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "support.html"));
+// Support is centralized at ElunaLab.
+app.get(["/support", "/support.html"], (_req, res) => {
+  res.redirect(302, "https://elunalab.com.br/suporte");
 });
 
 app.use("/api/guides", guidesRouter);
